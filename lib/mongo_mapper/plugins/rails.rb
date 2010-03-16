@@ -29,6 +29,10 @@ module MongoMapper
         def write_attribute(name, value)
           self[name] = value
         end
+
+        def to_key
+          [id.to_s]
+        end
       end
 
       module ClassMethods
